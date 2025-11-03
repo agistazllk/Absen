@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Mahasiswa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -15,7 +16,20 @@
 </nav>
 
 <div class="container">
-  <h3 class="text-center mb-4">Daftar Mahasiswa</h3>
+  
+  <?php 
+  // 1. Panggil file koneksi.php (untuk koneksi nyata)
+  include 'koneksi.php';
+  // Panggil fungsi koneksi di sini jika ingin menguji koneksi:
+  // $db = getDbConnection(); 
+  ?>
+  
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h3>Daftar Mahasiswa</h3>
+    <a href="tambah.php" class="btn btn-success">
+        <i class="fas fa-plus"></i> Tambah Data Baru
+    </a>
+  </div>
 
   <?php
   // Data mahasiswa (contoh statis)
